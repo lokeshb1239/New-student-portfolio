@@ -1,0 +1,39 @@
+ <!-- Projects -->
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <!-- Project cards will go here later -->
+      </div>
+    </section>
+
+    <!--to do app-->
+    <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="todo-app">
+    <h1>To-Do List</h1>
+
+    <form id="task-form" class="task-form">
+      <input id="task-input" type="text" placeholder="Add a new task..." autocomplete="off" />
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="controls">
+      <button id="clear-done" type="button">Clear Completed</button>
+      <button id="clear-all" type="button">Clear All</button>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+
+    <p class="hint">Tasks are saved in your browser (localStorage).</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
