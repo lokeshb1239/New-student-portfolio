@@ -10,7 +10,11 @@
   <header>
     <nav class="nav">
       <a href="#home" class="logo">Lokesh Bhamdare</a>
-      <ul class="nav-links">
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger" id="hamburger">☰</div>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -20,7 +24,7 @@
   </header>
 
   <main>
-    <!-- Home / Hero -->
+    <!-- Hero -->
     <section id="home" class="hero">
       <h1>Hello, I'm <span class="name">Lokesh Bhamdare</span></h1>
       <p>Student • Web Developer in learning • Building neat projects</p>
@@ -30,43 +34,65 @@
     <!-- About -->
     <section id="about" class="about">
       <h2>About Me</h2>
-      <p>Write 2–3 lines about yourself: studies, interests, skills (HTML, CSS, JS)</p>
+      <p>I am currently learning front-end web development and enjoy creating interactive projects using HTML, CSS, and JavaScript.</p>
       <ul class="skills">
-        <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
       </ul>
     </section>
 
     <!-- Projects -->
-   <!-- Projects Section -->
-<section class="projects">
+    <section id="projects" class="projects">
   <div class="container">
     <h2>Projects</h2>
     <div class="project-grid">
 
       <div class="card">
-        <h3>To-Do App</h3>
-        <p>Simple to-do list web app with add, delete and complete features.</p>
-        <div class="card-actions">
-          <a href="projects/todo/index.html" target="_blank">View Live</a>
-          <a href="#">Source Code</a>
+        <div class="card-bg" style="background-image: url('todo.jpg');"></div>
+        <div class="card-content">
+          <h3>To-Do App</h3>
+          <p>Simple to-do list web app with add, delete and complete features.</p>
+          <div class="card-actions">
+            <a href="projects/projects-todo/index.html" >View Live</a>
+            <a href="#">Source Code</a>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <h3>Landing Page</h3>
-        <p>Beautiful landing page layout using HTML and CSS.</p>
-        <div class="card-actions">
-          <a href="projects/landing/index.html" target="_blank">View Live</a>
-          <a href="#">Source Code</a>
+        <div class="card-bg" style="background-image: url('clac.jpg');"></div>
+        <div class="card-content">
+          <h3>Calculator App</h3>
+          <p>Simple and modern calculator built using JavaScript.</p>
+          <div class="card-actions">
+            <a href="projects/projects-calculator/index.html" >View Live</a>
+            <a href="#">Source Code</a>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <h3>Calculator App</h3>
-        <p>Simple and modern calculator built using JavaScript.</p>
-        <div class="card-actions">
-          <a href="projects/calculator/index.html" target="_blank">View Live</a>
-          <a href="#">Source Code</a>
+        <div class="card-bg" style="background-image: url('land.jpg');"></div>
+        <div class="card-content">
+          <h3>Landing Page</h3>
+          <p>Beautiful and responsive landing page design using HTML and CSS.</p>
+          <div class="card-actions">
+            <a href="projects/projects-landing/index.html" >View Live</a>
+            <a href="#">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-bg" style="background-image: url('gallerys.jpg');"></div>
+        <div class="card-content">
+          <h3>Gallery App</h3>
+          <p>Interactive image gallery with responsive design and back navigation.</p>
+          <div class="card-actions">
+            <a href="projects/projects-gallery/index.html" >View Live</a>
+            <a href="#">Source Code</a>
+          </div>
         </div>
       </div>
 
@@ -78,8 +104,8 @@
     <!-- Contact -->
     <section id="contact" class="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:youremail@example.com">lokeshbhamdare@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/YOUR_USERNAME" target="_blank">github.com/LOKESH@123459999</a></p>
+      <p>Email: <a href="mailto:lokeshbhamdare@gmail.com">lokeshbhamdare@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/LOKESH123459999" target="_blank">github.com/LOKESH123459999</a></p>
     </section>
   </main>
 
@@ -87,8 +113,6 @@
     <p>© <span id="year"></span> Lokesh Bhamdare</p>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

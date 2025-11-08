@@ -1,15 +1,34 @@
-// smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
+// === Navbar Hamburger Toggle ===
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+
+  // Blur background jab menu open ho
+  if (navLinks.classList.contains("active")) {
+    document.body.classList.add("menu-open");
+  } else {
+    document.body.classList.remove("menu-open");
+  }
+});
+
+// === Smooth Scroll aur Close Menu ===
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    target.scrollIntoView({ behavior: "smooth" });
+
+    navLinks.classList.remove("active");
+    document.body.classList.remove("menu-open");
   });
-  
-  // set year in footer
-  const yearEl = document.getElementById('year');
-  if(yearEl) yearEl.textContent = new Date().getFullYear();
-  
+});
+
+// === Projects Click ===
+function openProject(url) {
+  window.open(url, "_blank");
+}
+
+// === Year Auto ===
+document.getElementById("year").textContent = new Date().getFullYear();
