@@ -1,11 +1,11 @@
-// === Navbar Hamburger Toggle ===
+// === Hamburger Menu Toggle ===
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 
-  // Blur background jab menu open ho
+  // Background blur
   if (navLinks.classList.contains("active")) {
     document.body.classList.add("menu-open");
   } else {
